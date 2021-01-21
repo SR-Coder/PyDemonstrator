@@ -1,0 +1,224 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body{
+    position: relative;
+    font-family: 'Cardo', serif;
+    background: repeating-linear-gradient(
+        -55deg,
+        #222,
+        #222 2px,
+        #333 2px,
+        #333 4px
+    );
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+.red-text-small{
+    color: red;
+    font-size: .7em;
+}
+header{
+    position: sticky;
+    top: 0;
+    max-height: 88px;
+    width: 100%;
+    min-width: 800px;
+    background: rgb(62, 62, 62);
+    padding: 20px;
+    box-shadow: 0px 10px 10px black;
+}
+
+
+#login{
+    display: block;
+    text-align: right;
+    justify-content: space-around;
+    margin-top: 15px;
+    transition: all .5s linear;
+}
+#formLogin{
+    position: relative;
+}
+
+#logbtn{
+    padding: 0px 5px;
+}
+
+.main{
+    display: flex;
+    text-align: center;
+    /* justify-content: center; */
+    min-height: 800px;
+    
+}
+
+#regBtn{
+    font-size: .7em;
+    margin-top: -5px;
+    margin-right: -10px;
+}
+
+#register{
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display: block;
+    padding: 10px;
+    margin-top: 50px;
+    width: 400px;
+    height: 450px;
+    background-color: rgb(181, 181, 181);
+    border:1px solid  black  ;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px black;
+    transition: all .5s linear;
+}
+
+.visible{
+    visibility: visible;
+    opacity: 1;
+}
+
+.hidden{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.reghead{
+    padding: 10px 1px;
+    margin: 0px;
+}
+.registerbtn{
+    margin: 0px 0px;
+    padding: 0px 5px;
+}
+
+
+
+
+
+.block{
+    display: block;
+}
+.inline{
+    display: inline-block;
+}
+.bottom{
+    position: absolute;
+    bottom: 0;
+}
+
+.right{
+    margin-left: 100%;
+}
+.text-right{
+    text-align: right;
+}
+.abs{
+    position: absolute;
+}
+
+#openTab{
+    margin-top: 100px;
+    /* margin-right: auto; */
+    background: rgba(0,0,0,.25);
+    max-height: 75px;
+    display: flex;
+    align-items: center;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+#openTab:hover{
+    background: rgba(0,0,0,.5);
+}
+.open{
+    padding: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #818181;
+    transition-property: all;
+    transition-duration: .3s;
+}
+.open:hover{
+    color:#f1f1f1f1;
+}
+.open:active{
+    transform: rotate(90deg);
+}
+
+.leftMenu{
+    min-height: inherit;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    box-shadow: 0px 10px 10px black;
+}
+.leftMenu a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    transition: .3s;
+    color: #818181;
+}
+.leftMenu a:hover{
+    color: #f1f1f1;
+}
+
+.closebtn{
+    position: absolute;
+    top: 0;
+    right:25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@keyframes shiftShadow{
+    0%      {text-shadow: -4px 0px 2px black;}
+    50%     {text-shadow:  4px 0px 2px black;}
+    100%    {text-shadow: -4px 0px 2px black;}
+}
+
+.timer{
+    margin-top: 8px;
+    font-family: 'Press Start 2P';
+    font-size: 26px;
+    color: #818181;
+    /* text-shadow: 2px 2px rgb(43, 18, 18); */
+    animation-name: shiftShadow;
+    /* animation-delay: 3s; */
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.mainContent{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    color: #818181;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    max-height: 88px;
+    width: 100%;
+    min-width: 800px;
+    background: rgb(62, 62, 62);
+    padding: 20px;
+    box-shadow: 0px -10px 10px black;
+}
