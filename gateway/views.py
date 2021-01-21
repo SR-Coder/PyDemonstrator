@@ -20,9 +20,20 @@ def registerSubmit(request):
     lastName = request.POST['lName']
     email = request.POST['eMailr']
     passWord = request.POST['pWordr']
-    passWord = request.POST['chkPword']
-    createHash()
-    print(firstName)
+    cryptPass = bcrypt.hashpw(passWord.encode(), bcrypt.gensalt()).decode()
+    cKpassWord = request.POST['chkPword']
+    confirmKey = createHash()
+    # print(firstName)
+    newUser = User.objects.create(
+        fname=firstName,
+        lName=lastName,
+        email=email,
+        password=cryptPass,
+        accessLevel=0,
+        active=False,
+        confirmKey=confirmKey,
+        confirmed=False
+    )
     return redirect('/registered')
 
 def success(request):

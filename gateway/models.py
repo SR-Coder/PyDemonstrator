@@ -78,8 +78,8 @@ class User(models.Model):
     lName = models.CharField(max_length=25)
     email = models.EmailField()
     password = models.CharField(max_length=255)
-    age = models.DateField()
-    accessLevel = models.IntegerField()
+    age = models.DateField(null=True)
+    accessLevel = models.IntegerField(max_length=1)
     active = models.BooleanField()
     confirmKey = models.CharField(max_length=255) # This will be a key sent by email to compare and set the confirmed flag
     confirmed = models.BooleanField()
