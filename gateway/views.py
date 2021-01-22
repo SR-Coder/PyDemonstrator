@@ -23,7 +23,6 @@ def registerSubmit(request):
     cryptPass = bcrypt.hashpw(passWord.encode(), bcrypt.gensalt()).decode()
     cKpassWord = request.POST['chkPword']
     confirmKey = createHash()
-    # print(firstName)
     newUser = User.objects.create(
         fname=firstName,
         lName=lastName,
