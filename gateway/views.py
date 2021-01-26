@@ -6,6 +6,8 @@ from .models import User
 from .hfunctions import *
 
 # Create your views here.
+
+
 def dispLogReg(request):
     return render(request, 'logReg.html')
 

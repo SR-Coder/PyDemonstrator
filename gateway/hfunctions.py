@@ -13,3 +13,8 @@ def createHash():
         newHash = newHash + f'{randN}'
     print(newHash)
     return newHash
+
+def isLoggedIn():
+    if request.session['userID']:
+        return True
+    return False
