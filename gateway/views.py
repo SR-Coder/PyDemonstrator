@@ -26,7 +26,7 @@ def registerSubmit(request):
     cKpassWord = request.POST['chkPword']
     confirmKey = createHash()
     newUser = User.objects.create(
-        fname=firstName,
+        fName=firstName,
         lName=lastName,
         email=email,
         password=cryptPass,
