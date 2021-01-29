@@ -41,3 +41,21 @@ def success(request):
     return render(request,'success.html')
 
 # registration methond is going to need an emailer method.
+
+def displayAdminPage(request):
+    context = {
+        'users': User.objects.all()
+    }
+    return render(request, 'admin.html', context)
+
+
+
+
+# AJAX METHODS-------------------------------------
+# =================================================
+def dispUsers(request):
+    print('made it')
+    context = {
+        'users':User.objects.all()
+    }
+    return render(request, 'userSnip.html', context)
